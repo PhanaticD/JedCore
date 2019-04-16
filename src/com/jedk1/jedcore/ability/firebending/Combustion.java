@@ -340,16 +340,9 @@ public class Combustion extends CombustionAbility implements AddonAbility {
 	@Override
 	public void handleCollision(final Collision collision) {
 		super.handleCollision(collision);
-<<<<<<< HEAD
-		if (collision.isRemovingFirst()) {
-			state = new CombustState(collision.getLocationFirst());
-		} else if (collision.isRemovingSecond()) {
-			state = new CombustState(collision.getLocationSecond());
-=======
 
 		if (collision.isRemovingFirst()) {
 			state = new CombustState(collision.getLocationFirst());
->>>>>>> 61802a38e4cef30a15cb600b6a67d3d41de3d075
 		}
 	}
 
