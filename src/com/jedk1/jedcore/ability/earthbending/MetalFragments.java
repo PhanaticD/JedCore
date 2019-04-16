@@ -236,7 +236,13 @@ public class MetalFragments extends MetalAbility implements AddonAbility {
 		for (TempFallingBlock tfb : TempFallingBlock.getFromAbility(this)) {
 			FallingBlock fb = tfb.getFallingBlock();
 			if (fb.getLocation().getY() >= player.getEyeLocation().getY() + 1) {
+<<<<<<< HEAD
 				TempBlock tb = new TempBlock(fb.getLocation().getBlock(), fb.getBlockData());
+=======
+				Block block = fb.getLocation().getBlock();
+				TempBlock tb = new TempBlock(block, block.getType(), fb.getBlockData());
+
+>>>>>>> 61802a38e4cef30a15cb600b6a67d3d41de3d075
 				tblockTracker.add(tb);
 				sources.add(tb.getBlock());
 				counters.put(tb.getBlock(), 0);
